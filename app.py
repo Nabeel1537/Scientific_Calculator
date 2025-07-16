@@ -63,10 +63,13 @@ def calculator():
         # Trigonometry operations
         elif operation == "sin":
             result = np.sin(np.radians(angle))
+            return render_template("index.html", angle_result=result)
         elif operation == "cos":
             result = np.cos(np.radians(angle))
+            return render_template("index.html", angle_result=result)
         elif operation == "tan":
             result = np.tan(np.radians(angle))
+            return render_template("index.html", angle_result=result)
         # Bmi calculator operations section
         height_raw = request.form.get("height")
         weight_raw = request.form.get("weight")
